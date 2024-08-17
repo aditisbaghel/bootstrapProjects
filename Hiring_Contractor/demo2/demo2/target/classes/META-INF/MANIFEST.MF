@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: demo2
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 841829
+Implementation-Vendor-Id: com.abhinav.spring.boot
+Build-Jdk: 1.8.0_192
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/demo2
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,36 @@
+
+
+<footer style="color: #9d9d9d; background-color: #333; padding: 25px;"
+	class="page-footer container-fluid text-center fixed-bottom   navbar navbar-fixed-bottom">
+
+	<div class="footer-copyright text-center py-3">© 2020
+		Copyright:Expense Tracker</div>
+</footer>
+
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		if ($("div").hasClass("adminLogged"))
+			$("li").remove(".userlogged ");
+		
+		if ($("div").hasClass("reg"))
+			$("li").remove(".home_index");
+	});
+</script>
+
+<!-- <script type="text/javascript">
+	//changing the active page code 	
+	$(document).ready(function() {
+		$('.nav li a').click(function(e) {
+
+			$('.nav li.active').removeClass('active');
+			$(this).parent().addClass('active');
+			e.preventDefault();
+		});
+	});
+</script> -->
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+</html>

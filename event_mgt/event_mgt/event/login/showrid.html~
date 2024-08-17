@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>EventMGT Show Ticket</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="/event/login/js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top">
+		<a href="/event"><h1 id="title" class="hidden"><span id="logo">Event MGT <span>Ticket</span></span></h1></a>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<form action="/cgi-bin/showrid.py" method="post">				
+			<div class="box-header">
+				<h2>Show Ticket</h2>
+			</div>
+			<label for="Yourname">Your Name</label>
+			<br/>
+			<input type="text" id="yourname" name="cname">
+			<br/>
+			<button type="submit">Show Ticket</button>
+			<br/>
+			<a href="/event/"><p class="small">Log Out</p></a>
+			</form>
+		</div>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>EventMGT Book Ticket</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="/event/login/js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top">
+		<a href="/event"><h1 id="title" class="hidden"><span id="logo">Event MGT <span>Reservation</span></span></h1></a>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<form action="/cgi-bin/book.py" method="post">				
+			<div class="box-header">
+				<h2>Book Ticket</h2>
+			</div>
+			<label for="Yourname">Your Name</label>
+			<br/>
+			<input type="text" id="yourname" name="cname">
+			<br/>
+			<label for="Event">Event</label>
+			<br/>
+			<select name="event">
+				<option value="Select Event">Select Event</option>
+  				<option value="New Year Bash Appin">New Year Bash Appin</option>
+  				<option value="New Year Bash SIRT">New Year Bash SIRT</option>
+  				<option value="New Year Bash Dussehra Maidan">New Year Bash Dussehra Maidan</option>
+			</select> 
+			<br/>
+			<label for="Ticket">Ticket</label>
+			<br/>
+			<select name="ticket">
+  				<option value="1">1</option>
+  				<option value="2">2</option>
+  				<option value="3">3</option>
+  				<option value="4">4</option>
+  				<option value="5">5</option>
+  				<option value="6">6</option>
+  				<option value="7">7</option>
+  				<option value="8">8</option>
+  				<option value="9">9</option>
+  				<option value="10">10</option>
+
+			</select> 
+			<br/>
+			<label for="ymob">Mobile</label>
+			<br/>
+			<input type="text" id="ymob" name="mob">
+			<br/>
+			<label for="add">Address</label>
+			<br/>
+			<input type="text" id="yadd" name="address">
+			<br/>
+			<button type="submit">Book Ticket</button>
+			<br/>
+			<a href="/event/"><p class="small">Log Out</p></a>
+			</form>
+		</div>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
+
+</html>
